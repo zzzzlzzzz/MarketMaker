@@ -1,0 +1,17 @@
+{
+  "period": 600,
+  "accounts": [
+    {
+      "file": "user.csv",
+      "base": "BTC",
+      "quote": ["BRD", "DASH", "XMR", "XRP"],
+      "id": "binance",
+      "apiKey": "",
+      "secret": "",
+      "uid": "",
+      "password": "",
+      "timeout": 10000,
+      "nonce_as_time": true
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "logging": {
+    "version": 1,
+    "disable_existing_loggers": false,
+    "loggers": {
+      "MarketMakerBot": {
+        "level": "DEBUG",
+        "handlers": ["console", "file"]
+      }
+    },
+    "handlers": {
+      "console": {
+        "class": "logging.StreamHandler",
+        "stream": "ext://sys.stdout",
+        "formatter": "default"
+      },
+      "file": {
+        "class": "logging.handlers.TimedRotatingFileHandler",
+        "filename": "bot.log",
+        "when": "midnight",
+        "utc": true,
+        "formatter": "default"
+      }
+    },
+    "formatters": {
+      "default": {
+        "format": "%(asctime)s [%(levelname)s] %(module)s:%(name)s:%(funcName)s:%(lineno)d: %(message)s",
+        "datefmt": "%Y-%m-%d %H:%M:%S"
+      }
+    }
+  },
+  "exchange": {
+    "id": "binance",
+    "apiKey": "",
+    "secret": "",
+    "uid": "",
+    "password": "",
+    "timeout": 10000
+  },
+  "bot_behaviour_update_period": 10,
+  "trade_symbol": "LTC/BTC",
+  "trade_amount": 5,
+  "minimal_profit": 0.021,
+  "maximal_profit": 0.033,
+  "orders_count": 4,
+  "accumulate": "all",
+  "request_balances": true,
+  "nonce_as_time": true,
+  "stop_after_pump": true
+}
